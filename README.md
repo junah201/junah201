@@ -1,4 +1,4 @@
-# white-201
+# junah201
 
 ## email : white201.dev@gmail.com | white_201@naver.com
 ## discord : white201#0201
