@@ -2,6 +2,8 @@
 
 [강의 링크](https://nomadcoders.co/javascript-for-beginners)
 
+![image](https://user-images.githubusercontent.com/75025529/208254925-920c7a32-395c-4603-9d35-ca6094e24c80.png)
+
 ### 학습 상태
 
 - [X] #1 [2021 Update] Introduction
