@@ -4,17 +4,25 @@
 
 ![image](https://user-images.githubusercontent.com/75025529/208254925-920c7a32-395c-4603-9d35-ca6094e24c80.png)
 
+### 목적
+
+html css 부분에서 단순히 구글링(야매)로 해결하고 넘어갔던 부분를 제대로 익히기 (기초다지기)
+
 ### 학습 상태
 
-- [X] #1 [2021 Update] Introduction
-- [X] #2 [2021 Update] Welcome to Javascript
-- [ ] #3 [2021 Update] Javascript on the Browser
+- [x] #1 [2021 Update] Introduction
+- [x] #2 [2021 Update] Welcome to Javascript
+- [x] #3 [2021 Update] Javascript on the Browser
 - [ ] #4 [2021 Update] Login
 - [ ] #5 [2021 Update] Clock
 - [ ] #6 [2021 Update] Quotes and Background
 - [ ] #7 [2021 Update] To Do List
 - [ ] #8 [2021 Update] Weather
 
-### 목적
+### 학습 메모
 
-html css 부분에서 단순히 구글링(야매)로 해결하고 넘어갔던 부분를 제대로 익히기 (기초다지기)
+학습 도중 새롭게 알게된 사실에 대해서 메모합니다.
+
+**Javascript on the Browser**
+
+- element.classList.toggle("className") : 해당 클래스가 있으면 빼고, 없으면 추가
