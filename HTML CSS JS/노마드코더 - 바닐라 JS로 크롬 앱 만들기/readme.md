@@ -13,7 +13,7 @@ html css 부분에서 단순히 구글링(야매)로 해결하고 넘어갔던 �
 - [x] #1 [2021 Update] Introduction
 - [x] #2 [2021 Update] Welcome to Javascript
 - [x] #3 [2021 Update] Javascript on the Browser
-- [ ] #4 [2021 Update] Login
+- [x] #4 [2021 Update] Login
 - [ ] #5 [2021 Update] Clock
 - [ ] #6 [2021 Update] Quotes and Background
 - [ ] #7 [2021 Update] To Do List
@@ -23,6 +23,13 @@ html css 부분에서 단순히 구글링(야매)로 해결하고 넘어갔던 �
 
 학습 도중 새롭게 알게된 사실에 대해서 메모합니다.
 
-**Javascript on the Browser**
+**3. Javascript on the Browser**
 
 - element.classList.toggle("className") : 해당 클래스가 있으면 빼고, 없으면 추가
+
+**4. Login**
+
+- event.preventDefault() : 브라우저의 기본 동작 막기
+- localStorage.setItem("key", "value")
+- localStorage.getItem("key")
+- localStorage.removeItem("key")

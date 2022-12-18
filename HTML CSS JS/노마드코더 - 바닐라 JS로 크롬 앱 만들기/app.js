@@ -1,7 +1,30 @@
-const h1 = document.getElementById("title");
+const loginInput = document.querySelector("#login-form input");
+const loginForm = document.querySelector("#login-form");
 
-function handleTitleClick() {
-	h1.classList.toggle("clicked");
+const link = document.querySelector("a");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
+
+function onLoginSubmit(event) {
+	event.preventDefault();
+	loginForm.classList.add(HIDDEN_CLASSNAME);
+	const username = loginInput.value;
+	localStorage.setItem(USERNAME_KEY, username);
+	printGreetings(username);
 }
 
-h1.onclick = handleTitleClick;
+function printGreetings(username) {
+	greeting.classList.remove(HIDDEN_CLASSNAME);
+	greeting.innerHTML = `Hello ${username}`;
+}
+
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+if (savedUsername === null) {
+	loginForm.classList.remove(HIDDEN_CLASSNAME);
+	loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+	printGreetings(savedUsername);
+}
