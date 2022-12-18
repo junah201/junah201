@@ -17,7 +17,7 @@ html css 부분에서 단순히 구글링(야매)로 해결하고 넘어갔던 �
 - [x] #5 [2021 Update] Clock
 - [x] #6 [2021 Update] Quotes and Background
 - [x] #7 [2021 Update] To Do List
-- [ ] #8 [2021 Update] Weather
+- [x] #8 [2021 Update] Weather
 
 ### 학습 메모
 
@@ -57,3 +57,8 @@ html css 부분에서 단순히 구글링(야매)로 해결하고 넘어갔던 �
 - JSON.parse("string") : 해당 문자열을 오브젝트화 합니다.
 - parseInt("string") : 해당 문자열을 int로 변환합니다.
 - List.filter(anyFunction) : 해당 List에서 anyFunction에 값을 하나 씩 넣고 이후 리턴 값이 true 인 값만으로 모은 List를 반환합니다.
+
+**8. Weather**
+
+- navigator.geolocation.getCurrentPosition(successCallback, errorCallback) :
+- fetch(url) : url에 get 요청
