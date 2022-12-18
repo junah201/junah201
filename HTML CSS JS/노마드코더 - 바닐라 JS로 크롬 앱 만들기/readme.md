@@ -16,7 +16,7 @@ html css 부분에서 단순히 구글링(야매)로 해결하고 넘어갔던 �
 - [x] #4 [2021 Update] Login
 - [x] #5 [2021 Update] Clock
 - [x] #6 [2021 Update] Quotes and Background
-- [ ] #7 [2021 Update] To Do List
+- [x] #7 [2021 Update] To Do List
 - [ ] #8 [2021 Update] Weather
 
 ### 학습 메모
@@ -48,3 +48,12 @@ html css 부분에서 단순히 구글링(야매)로 해결하고 넘어갔던 �
 - Math.ceil(숫자) : 해당 숫자를 올림합니다.
 - Math.floor(숫자) : 해당 숫자를 내림합니다.
 - document.createElement("tag") : 해당 tag의 Element를 생성합니다.
+
+**7. To Do List**
+
+- event.event.target.parentElement : target의 부모 요소
+- element.remove() : 해당 Element를 삭제합니다.
+- JSON.stringify(anyObject) : 해당 오브젝트를 문자열화 합니다.
+- JSON.parse("string") : 해당 문자열을 오브젝트화 합니다.
+- parseInt("string") : 해당 문자열을 int로 변환합니다.
+- List.filter(anyFunction) : 해당 List에서 anyFunction에 값을 하나 씩 넣고 이후 리턴 값이 true 인 값만으로 모은 List를 반환합니다.
