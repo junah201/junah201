@@ -14,7 +14,7 @@ html css 부분에서 단순히 구글링(야매)로 해결하고 넘어갔던 �
 - [x] #2 [2021 Update] Welcome to Javascript
 - [x] #3 [2021 Update] Javascript on the Browser
 - [x] #4 [2021 Update] Login
-- [ ] #5 [2021 Update] Clock
+- [x] #5 [2021 Update] Clock
 - [ ] #6 [2021 Update] Quotes and Background
 - [ ] #7 [2021 Update] To Do List
 - [ ] #8 [2021 Update] Weather
@@ -33,3 +33,10 @@ html css 부분에서 단순히 구글링(야매)로 해결하고 넘어갔던 �
 - localStorage.setItem("key", "value")
 - localStorage.getItem("key")
 - localStorage.removeItem("key")
+
+**5. Clock**
+
+- setInterval(함수, ms) : 해당 함수를 지정한 ms마다 실행합니다.
+- setTimeout(함수, ms) : 해당 함수를 지정한 ms 이후에 한번만 실행합니다.
+- string.padStart(N, "K") : 해당 string의 길이가 N보다 작으면 string에 앞에 "K"를 붙여 길이를 N개로 만듭니다.
+- string.padEnd(N, "K") : 해당 string의 길이가 N보다 작으면 string에 뒤에 "K"를 붙여 길이를 N개로 만듭니다.
