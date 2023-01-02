@@ -48,3 +48,18 @@ Go로 서버 열고, 병렬화 배워보기 전에 Go 기초 다지기
 - struct 선언법 : `type 구조체명 struct {내부변수명1 타입1}`
 - struct 사용법 : `변수명 := 구조체명{내부변수명1 : 내부변수값1, 내부변수명2 : 내부변수값2}`
 - struct 내부 요소 접근 : `변수명.필드명`
+
+**2. BANK & DICTIONARY PROJECTS**
+
+- method 선언법 : `func (함수내부에서쓸이름 Struct명) 함수명 (인자 인자타입) 리턴값 { 실행코드 }` (ex, `func func (a account) Deposit(amount int) { 실행코드 }`)
+- 에러 생성방법 1 : error.Error())
+- 에러 생성방법 2 : errors.New
+- Go 에서의 공백값 (None, null) : `nil`
+- Go 에서의 에러 핸들링 :
+
+  ```Go
+  err := anyFunction()
+  if err != nil {
+      log.Fatalln(err)
+  }
+  ```
