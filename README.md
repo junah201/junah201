@@ -20,6 +20,20 @@
 <table>
 	<tr>
 		<td align="center" width="225">
+			<a href="https://github.com/junah201/atcoder-readme-stats">
+				<img
+					src="https://img.atcoder.jp/assets/atcoder.png"
+					width="80"
+					alt=""
+				/>
+				<br />
+				<b>atcoder readme stats</b>
+			</a>
+			<br />
+			<sub>2023/07/08 ~ 2023/07/10</sub><br />
+			<sub>Python, Lambda, Figma</sub><br />
+		</td>
+		<td align="center" width="225">
 			<a href="https://github.com/junah201/naver-cafe-twitch-extension">
 				<img
 					src="https://extensions-discovery-images.twitch.tv/v6llq304g93p1ud7j5k10uuvk31ttd/0.0.1/logo96040021-19d3-4a34-b38e-7057f456247b"
@@ -61,7 +75,7 @@
 		<td align="center" width="225">
 			<a href="https://github.com/junah201/Runeterras.com">
 				<img
-					src="https://e7.pngegg.com/pngimages/984/1004/png-clipart-legends-of-runeterra-icon-tech-companies.png"
+					src="https://cdn2.steamgriddb.com/file/sgdb-cdn/icon_thumb/ec0f40c389aeef789ce03eb814facc6c.png"
 					width="80"
 					alt=""
 				/>
@@ -77,7 +91,9 @@
 				<sub>Runeterras.com</sub>
 			</a>
 		</td>
-		<td align="center" width="225">
+	</tr>
+	<tr>
+ 		<td align="center" width="225">
 			<a href="https://github.com/junah201/velog-helper">
 				<img
 					src="https://github.com/junah201/velog-helper/raw/main/frontend/icons/icon128.png"
@@ -99,8 +115,6 @@
 				<sub>Chrome Web Store</sub>
 			</a>
 		</td>
-	</tr>
-	<tr>
 		<td align="center" width="225">
 			<a href="https://github.com/junah201/Twip">
 				<img
