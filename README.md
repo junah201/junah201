@@ -201,7 +201,7 @@
     </a>
 	<br/>
 	<a href="https://atcoder.jp/users/junah" target="_blank" title="junah">
-		<img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fatcoder-badges.now.sh%2Fapi%2Fatcoder%2Fjson%2Fjunah" />
+		<img src="https://atcoder.junah.dev/v1/generate_badge?name=junah" />
 	</a>
 	<br/>
 	<a href="https://codeforces.com/profile/junah" target="_blank" title="junah">
