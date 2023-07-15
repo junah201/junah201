@@ -51,3 +51,54 @@
     3. 원래 변수의 값에 임시 저장소 내의 값을 복제하여 저장한다.
   - 내부적으로 `+=`이 진행되는 중간에 스레드 간 콘텍스트 전환이 발생하면, 임시 저장소에 저장된 값이 유실되는 경합 조건 오류가 발생할 수 있다.
   - 이러한 경합 조건 오류는 소스 코드만 확인해서는 찾아내기 매우 힘들다. (OS는 거의 모든 곳에서 스레드 간의 콘텍스트 전환을 수행할 수 있다.)
+ 
+**CHAPTER 3 Asyncio 공략**
+
+- Asyncio를 사용한 `Hello World`
+```py
+import asyncio, time
+
+async def main():
+  print(f"{time.ctime()} Hello!")
+  await asyncio.sleep(1.0)
+  print(f"{time.ctime()} Goodbye!")
+
+asyncio.run(main())
+```
+  - 일반적으로는 asyncio 모듈에서 제공하는 run() 함수로 asyncio 함수를 실행한다.
+
+- run() 함수 내부의 모든 동작에 대한 거의 완벽한 예제
+```py
+import asyncio, time
+
+async def main():
+  print(f"{time.ctime()} Hello!")
+  await asyncio.sleep(1.0)
+  print(f"{time.ctime()} Goodbye!")
+
+loop = asyncio.get_event_loop()  # 1
+task = loop.create_task(main())  # 2
+loop.run_until_complete(task)    # 3
+pending = asyncio.all_tasks(loop=loop)
+for task in pending:
+  task.cancel()
+group = asyncio.gather(*pending, return_exceptions=True)  # 4
+loop.run_until_complete(group)  # 3
+loop.close()  # 5
+```
+- 위 코드 설명
+  - 1 : `loop = asyncio.get_event_loop()` 코루틴을 실행하기 위한 루프 인스턴스를 얻는 문법
+  - 2 : `task = loop.create_task(main())`를 하기 전까지 코루틴 함수를 실행되지 않는다. 반환받은 task 객체를 통해 작업의 상태를 모니터링 할 수 있고, 코루틴 완료 후 반환 값을 얻을 수도 있으며, 중간에 `task.cancel()`을 이용해서 작업을 취소할 수도 있다.
+  - 3 : `loop.run_until_complete(task)` 을 통해 현재 스레드를 **블로킹** 할 수 있다.'
+  - 4 : process signal이나 loop.stop()의 호출로 인한 루프 중지 등으로 `main` 블로킹 상태가 풀린 후 (위 예제에서는 `await asyncio.sleep(1.0)`이 반환된 후) run_until_complete() 이후의 코드가 실행된다. 이후 코드의 절차는 아직 실행되는 태스크를 취합하고, 모든 태스크에게 취소 요청을 한 후 loop.run_until_complete(group)를 호출하여 태스크들이 모두 종료 상태가 될 때까지 대기한다.
+  - 5 : `loop.close()`는 보통 최종 동작으로, 루트의 모든 대기열을 비우고, executor를 종료시킨다.
+- 위 모든 과정은 `asyncio.run()`으로 추상화되어 있다.
+
+- `코루틴` 이란
+  - `async def`로 선언된 함수의 type은 코루틴이 아니라 함수이고, 정확하게 말하면 코루틴 함수이다.
+  - 코루틴이란 완료되지 않는 채 일시 정지했던 함수를 재개할 수 있는 기능을 가진 객체이다.
+  - 즉 `async def`로 선언된 함수 자체가 코루틴이 아니라, `async def`의 반환 값이 코루틴이다. (반환 값이 함수의 retrun 값이 아니라, 함수가 실행되기전 함수가 반환하는 값임)
+
+- awaitable 이란
+  - 코루틴
+  - `__await__()`라는 특별 메서드를 구현한 모든 객체 (일상적인 프로그래밍에서 사용할 일이 거의 없음)
