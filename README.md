@@ -220,14 +220,3 @@
   <img src="https://velog-readme-stats.vercel.app/api?name=junah201">
 </a>
 </p>
-
-## 👨‍💻 Outsourcing
-
-<p align="center">
-    <a href="https://kmong.com/@Junah">
-        <img src="https://kmong.com/favicon.ico" style="width:32px; height:32px;"/>
-    </a>
-    <a href="https://soomgo.com/profile/users/8538491">
-        <img src="https://static.cdn.soomgo.com/static/favicon.ico" style="width:32px; height:32px;"/>
-    </a>
-</p>
