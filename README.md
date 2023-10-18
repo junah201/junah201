@@ -1,6 +1,4 @@
 # 김준아 (Junah Kim)
-![snuh - 복사본](https://github.com/junah201/junah201/assets/75025529/b827a854-4b95-4a4b-a290-756234b8423f)
-
 
 <p align="center">
 	<a href="https://medium.com/@junah201">
