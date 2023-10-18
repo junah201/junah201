@@ -1,4 +1,6 @@
 # 김준아 (Junah Kim)
+![snuh - 복사본](https://github.com/junah201/junah201/assets/75025529/b827a854-4b95-4a4b-a290-756234b8423f)
+
 
 <p align="center">
 	<a href="https://medium.com/@junah201">
@@ -19,6 +21,20 @@
 
 <table>
 	<tr>
+		<td align="center" width="225">
+			<a href="https://github.com/junah201/SNUH">
+				<img
+					src="https://github.com/junah201/junah201/assets/75025529/b827a854-4b95-4a4b-a290-756234b8423f"
+					width="80"
+					alt=""
+				/>
+				<br />
+				<b>SNUH 연구단 관리 사이트</b>
+			</a>
+			<br />
+			<sub>2023/08/14 ~ </sub><br />
+			<sub>Python, FastAPI, React, MUI, MySQL, RDS, S3</sub><br />
+		</td>
 		<td align="center" width="225">
 			<a href="https://github.com/junah201/atcoder-readme-stats">
 				<img
@@ -72,6 +88,8 @@
 				<sub>medicalinnovation.or.kr</sub>
 			</a>
 		</td>
+	</tr>
+	<tr>
 		<td align="center" width="225">
 			<a href="https://github.com/junah201/Runeterras.com">
 				<img
@@ -91,8 +109,6 @@
 				<sub>Runeterras.com</sub>
 			</a>
 		</td>
-	</tr>
-	<tr>
  		<td align="center" width="225">
 			<a href="https://github.com/junah201/velog-helper">
 				<img
