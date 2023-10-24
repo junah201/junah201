@@ -18,11 +18,11 @@
 ## 💻 Side Projects
 
 <table>
-	<tr>
+	    <tr>
 		<td align="center" width="225">
 			<a href="https://github.com/junah201/SNUH">
 				<img
-					src="https://github.com/junah201/junah201/assets/75025529/b827a854-4b95-4a4b-a290-756234b8423f"
+					src="https://media.discordapp.net/attachments/899553672453820426/1166227973742014575/276150641-b827a854-4b95-4a4b-a290-756234b8423f.png"
 					width="80"
 					alt=""
 				/>
