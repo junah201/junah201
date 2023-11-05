@@ -34,6 +34,20 @@
 			<sub>Python, FastAPI, React, MUI, MySQL, RDS, S3</sub><br />
 		</td>
 		<td align="center" width="225">
+			<a href="https://github.com/junah201/solvedac-readme-stats">
+				<img
+					src="https://scontent-ssn1-1.xx.fbcdn.net/v/t39.30808-6/305272197_443733567775099_7971917755761425362_n.png?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=8RzuYH2LWJEAX_sWHIG&_nc_ht=scontent-ssn1-1.xx&oh=00_AfBffUT9KBsOYvCP1hdoNJR6u_CHBiy8o6PiiXbTcfgETA&oe=654C90BE"
+					width="80"
+					alt=""
+				/>
+				<br />
+				<b>solvedac readme stats</b>
+			</a>
+			<br />
+			<sub>2023/08/08 ~ 2023/08/09</sub><br />
+			<sub>Python, Lambda, Figma</sub><br />
+		</td>
+		<td align="center" width="225">
 			<a href="https://github.com/junah201/atcoder-readme-stats">
 				<img
 					src="https://img.atcoder.jp/assets/atcoder.png"
@@ -67,6 +81,8 @@
 				<sub>Twitch Extension Store</sub>
 			</a>
 		</td>
+	</tr>
+	<tr>
 		<td align="center" width="225">
 			<a href="https://github.com/junah201/Medical-Innovation">
 				<img
@@ -86,8 +102,6 @@
 				<sub>medicalinnovation.or.kr</sub>
 			</a>
 		</td>
-	</tr>
-	<tr>
 		<td align="center" width="225">
 			<a href="https://github.com/junah201/Runeterras.com">
 				<img
@@ -148,6 +162,8 @@
 				<sub>PyPi</sub>
 			</a>
 		</td>
+	</tr>
+	<tr>
 		<td align="center" width="225">
 			<a href="https://github.com/junah201/discord-bot-autoselfcheck">
 				<img
