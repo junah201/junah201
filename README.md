@@ -242,11 +242,7 @@
 ## 🪄 Blog
 
 <p align="center">
-	<a href="https://medium.com/@junah201">
+<a href="https://medium.com/@junah201">
   <img src="https://medium-readme-stats.vercel.app/api/post?name=junah201">
-</a>
-<br />
-<a href="https://velog.io/@junah201">
-  <img src="https://velog-readme-stats.vercel.app/api?name=junah201">
 </a>
 </p>
