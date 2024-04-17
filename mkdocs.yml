@@ -3,7 +3,7 @@ site_name: Junah
 site_url: http://junah.dev
 site_author: Junah Kim
 site_description: Junah's personal notes
-docs_dir: ./
+docs_dir: docs
 
 # Repository
 repo_name: junah201/junah201
