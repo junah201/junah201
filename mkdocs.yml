@@ -66,3 +66,6 @@ plugins:
       blog_dir: blog
       blog_toc: true
       post_date_format: long
+
+# Copyright
+copyright: Copyright &copy; 2024 Junah Kim
