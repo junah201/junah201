@@ -1,0 +1,685 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Junah's personal notes">
+      
+      
+        <meta name="author" content="Junah Kim">
+      
+      
+        <link rel="canonical" href="http://junah.dev/book/Using%20Asyncio%20in%20Python/readme/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+    
+    
+      
+        <title>Using Asyncio in Python - Junah</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#using-asyncio-in-python" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Junah" class="md-header__button md-logo" aria-label="Junah" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Junah
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Using Asyncio in Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/junah201/junah201" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    junah201/junah201
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Junah" class="md-nav__button md-logo" aria-label="Junah" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Junah
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/junah201/junah201" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    junah201/junah201
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../study/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Study
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Book
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      목적
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      학습 상태
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      학습 메모
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/junah201/junah201/edit/master/docs/book/Using Asyncio in Python/readme.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/junah201/junah201/raw/master/docs/book/Using Asyncio in Python/readme.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="using-asyncio-in-python">Using Asyncio in Python</h1>
+<p><a href="https://product.kyobobook.co.kr/detail/S000001810381">책 링크</a></p>
+<p><img alt="image" src="https://github.com/junah201/self-study/assets/75025529/c79baf3b-51f3-43cb-b3de-74320b137ca0" /></p>
+<h3 id="_1">목적</h3>
+<p>파이썬에서 비동기에 대해서 디테일하게 모르고 넘어갔던 부분에 대해서 학습하기</p>
+<h3 id="_2">학습 상태</h3>
+<ul>
+<li>[x] CHAPTER 1 Asyncio 소개</li>
+<li>[x] CHAPTER 2 스레드에 관한 진실</li>
+<li>[x] CHAPTER 3 Asyncio 공략</li>
+<li>[ ] CHAPTER 4 여러분이 사용하지 않는 Asyncio 라이브러리 20개</li>
+<li>[ ] CHAPTER 5 마치며</li>
+<li>[ ] APPENDIX A 파이썬의 비동기 지원에 대한 역사</li>
+<li>[ ] APPENDIX B 보충 자료</li>
+</ul>
+<h3 id="_3">학습 메모</h3>
+<p>학습 도중 새롭게 알게된 사실에 대해서 메모합니다.</p>
+<p><strong>CHAPTER 1 Asyncio 소개</strong></p>
+<ul>
+<li>CPU는 작업을 완료한 후 네트워크 I/O 작업을 기다린다. CPU 작업은 네트워크 작업보다 10만 배 이상 빠르다.</li>
+<li>I/O 위주 작업에 스레드 기반 병행 처리보다 비동기 기반 병행처리를 적용해야 하는 이유</li>
+<li>Asyncio는 스레드를 사용하는 선점형 멀티태스킹보다 오류, 경합조건, 혹은 비결정론적 위험 요소(nondeterministic danger)에 더욱 안전하다.</li>
+<li>Asyncio를 통해 <strong>동시에</strong> 수천 개의 소켓 연결(WebSocket, MQTT)을 간단히 처리할 수 있다.</li>
+<li>Asyncio를 통해 GIL를 해결할 수 있는 것이 아니라, GIL의 문제는 멀티스레드를 사용할 때 멀티코어 병렬화를 막는 것이지만, Asyncio는 명목상 단일 스레드이기 때문에 GIL의 영향을 받지 않는 것이다.</li>
+</ul>
+<p><strong>CHAPTER 2 스레드에 관한 진실</strong></p>
+<ul>
+<li>스레딩의 장점</li>
+<li>읽기 쉬운 코드 (코드가 top-down 방식이며, 함수 내에서 다른 코드 혹은 함수의 동시 실행에 대해 고려할 필요가 없다.)</li>
+<li>공유 메모리를 통한 병렬처리 (스레드 간 공유 메모리를 통해 통신하면서 코드에서 여러 CPU를 이용할 수 있다.)<ul>
+<li>하지만 파이썬에서는 GIL로 인해서 병렬성이 제한됨</li>
+</ul>
+</li>
+<li>
+<p>많은 모범 사례 및 노하우</p>
+</li>
+<li>
+<p>스레딩의 단점</p>
+</li>
+<li>스레딩은 어렵다. (스레드 관련 오류나 경합 조건은 가장 고치기 어렵다.)</li>
+<li>스레드는 더 많은 OS 자원을 사용한다.</li>
+<li>스레딩은 처리량에 영향을 줄 수 있다. (매우 높은 병행 수준(5000개 이상의 스레드)에서는 콘텍스트 전환 비용으로 인해 처리량에 영향이 있을 수 있다.)</li>
+<li>
+<p>스레딩은 유연하지 않다. (ex, 일부 스레드는 소켓으로부터 데이터가 도달하기를 기다리고 있을 수도 있다. 하지만 OS 스케줄러는 데이터가 도달하여 해당 스레드의 실행 재개가 필요하기 전까지 수천 번에 거처 콘텍스트 전환을 의밓 없이 수행할 것이다.)</p>
+</li>
+<li>
+<p>경합 조건 오류의 예시</p>
+</li>
+<li>스레딩 연산에서 <code>+=</code> 연산에 경우 내부적으로 여러 단계로 구성되어 있다.<ol>
+<li>원래 변수 값을 읽어 임시 저장소에 저장한다.</li>
+<li>임시 저장소 내의 값에 더할 값을 더한다.</li>
+<li>원래 변수의 값에 임시 저장소 내의 값을 복제하여 저장한다.</li>
+</ol>
+</li>
+<li>내부적으로 <code>+=</code>이 진행되는 중간에 스레드 간 콘텍스트 전환이 발생하면, 임시 저장소에 저장된 값이 유실되는 경합 조건 오류가 발생할 수 있다.</li>
+<li>이러한 경합 조건 오류는 소스 코드만 확인해서는 찾아내기 매우 힘들다. (OS는 거의 모든 곳에서 스레드 간의 콘텍스트 전환을 수행할 수 있다.)</li>
+</ul>
+<p><strong>CHAPTER 3 Asyncio 공략</strong></p>
+<ul>
+<li>Asyncio를 사용한 <code>Hello World</code>
+  ```py
+  import asyncio, time</li>
+</ul>
+<p>async def main():
+    print(f"{time.ctime()} Hello!")
+    await asyncio.sleep(1.0)
+    print(f"{time.ctime()} Goodbye!")</p>
+<p>asyncio.run(main())
+  ```
+  - 일반적으로는 asyncio 모듈에서 제공하는 run() 함수로 asyncio 함수를 실행한다.</p>
+<ul>
+<li>run() 함수 내부의 모든 동작에 대한 거의 완벽한 예제
+  ```py
+  import asyncio, time</li>
+</ul>
+<p>async def main():
+    print(f"{time.ctime()} Hello!")
+    await asyncio.sleep(1.0)
+    print(f"{time.ctime()} Goodbye!")</p>
+<p>loop = asyncio.get_event_loop()  # 1
+  task = loop.create_task(main())  # 2
+  loop.run_until_complete(task)    # 3
+  pending = asyncio.all_tasks(loop=loop)
+  for task in pending:
+    task.cancel()
+  group = asyncio.gather(*pending, return_exceptions=True)  # 4
+  loop.run_until_complete(group)  # 3
+  loop.close()  # 5
+  <code>``
+  - 1 :</code>loop = asyncio.get_event_loop()<code>코루틴을 실행하기 위한 루프 인스턴스를 얻는 문법
+  - 2 :</code>task = loop.create_task(main())<code>를 하기 전까지 코루틴 함수를 실행되지 않는다. 반환받은 task 객체를 통해 작업의 상태를 모니터링 할 수 있고, 코루틴 완료 후 반환 값을 얻을 수도 있으며, 중간에</code>task.cancel()<code>을 이용해서 작업을 취소할 수도 있다.
+  - 3 :</code>loop.run_until_complete(task)<code>을 통해 현재 스레드를 **블로킹** 할 수 있다.'
+  - 4 : process signal이나 loop.stop()의 호출로 인한 루프 중지 등으로</code>main<code>블로킹 상태가 풀린 후 (위 예제에서는</code>await asyncio.sleep(1.0)<code>이 반환된 후) run_until_complete() 이후의 코드가 실행된다. 이후 코드의 절차는 아직 실행되는 태스크를 취합하고, 모든 태스크에게 취소 요청을 한 후 loop.run_until_complete(group)를 호출하여 태스크들이 모두 종료 상태가 될 때까지 대기한다.
+  - 5 :</code>loop.close()<code>는 보통 최종 동작으로, 루트의 모든 대기열을 비우고, executor를 종료시킨다.
+- 위 모든 과정은</code>asyncio.run()`으로 추상화되어 있다.</p>
+<ul>
+<li><code>코루틴</code> 이란</li>
+<li><code>async def</code>로 선언된 함수의 type은 코루틴이 아니라 함수이고, 정확하게 말하면 코루틴 함수이다.</li>
+<li>코루틴이란 완료되지 않는 채 일시 정지했던 함수를 재개할 수 있는 기능을 가진 객체이다.</li>
+<li>
+<p>즉 <code>async def</code>로 선언된 함수 자체가 코루틴이 아니라, <code>async def</code>의 반환 값이 코루틴이다. (반환 값이 함수의 retrun 값이 아니라, 함수가 실행되기전 함수가 반환하는 값임)</p>
+</li>
+<li>
+<p>awaitable 이란</p>
+</li>
+<li>코루틴</li>
+<li>
+<p><code>__await__()</code>라는 특별 메서드를 구현한 모든 객체 (일상적인 프로그래밍에서 사용할 일이 거의 없음)</p>
+</li>
+<li>
+<p>코루틴 내부에 send()와 StopIteration 사용하기
+  ```py
+  async def f():
+    return 123</p>
+</li>
+</ul>
+<p>core = f()
+  try:
+    core.send(None) # 1
+  except StopIteration as e:
+    print('The answer was :', e.value) # 2
+  ```
+  - 1: 코루틴에 None을 send하여 초기화한다.
+  - 2: 코루틴이 <strong>반환</strong>될 때 StopIteration라는 특별한 예외가 발생한다.</p>
+<ul>
+<li>코루틴에 직접 예외를 주입해보기
+  ```py<blockquote>
+<blockquote>
+<blockquote>
+<p>core = f() #1
+core.send(None)
+core.throw(Exception, 'blsh') # 2
+  Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    File "<stdin>", line 2, in f
+  Exception: blah
+  blash
+  ```</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li>1: 코루틴 함수 f()를 이용해서 코루틴 객체를 생성함</li>
+<li>
+<p>2: core.throw()를 호출하여 예외 클래스와 값을 전달한다.</p>
+</li>
+<li>
+<p>async with : 네트워크 연결과 같은 네트워크 자원의 생명주기를 적절히 정의한 범위 내에서 관리하고자 할때 async with은 매우 편리하다.
+  ```py
+  class Connection:
+    def <strong>init</strong>(self, host, port):
+      self.host = host
+      self.port = port
+    async def <strong>aenter</strong>(self):
+      self.conn = await get_conn(self.host, self.port)
+      return self.conn
+    async def __aexit(self, exc_type, exc, tb):
+      await self.conn.close()</p>
+</li>
+</ul>
+<p>async with Connection('localhost', 9001) as conn:
+    # doing something using conn
+  ```
+  - 동기 콘텍스트 관리자를 위한 특별 메서드인 <strong>enter</strong>() 대신, <strong>aenter</strong>() 라는 새로운 특별 메서드를 사용함.
+  - 동기 콘텍스트 관리자를 위한 특별 메서드인 <strong>exit</strong>() 대신, <strong>aexit</strong>() 라는 새로운 특별 메서드를 사용함.</p>
+<ul>
+<li>전통적인 이터레이터
+  ```py
+  class A:
+    def <strong>iter</strong>(self):
+      self.x = 0
+      return self
+    def __next(self):
+      if self.x &gt; 2:
+        raise StopIteraion
+      self.x += 1
+      return self.x</li>
+</ul>
+<p>for i in A():
+    print(i)
+  ```
+  - 이터레이터는 <strong>iter</strong>()라는 특별 메서드를 구현하고, 이 메서드는 iterable을 반환해야 한다.
+  - iterable은 <strong>next</strong>() 특별 메서드를 구현한 객체이다.
+  - <strong>next</strong>() 는 반복에 모든 단계에서 StopIteration이 발생할 때 까지 계속 호출되며, 각 단계마다 반환값을 반환단다.</p>
+<ul>
+<li>비동기 이터레이터 (async for)</li>
+<li>def <strong>aiter</strong>()를 구현해야한다. (async def가 아님)</li>
+<li><strong>aiter</strong>()는 asycn def __anext()를 구현한 객체를 반환해야함.</li>
+<li>__anext()__는 반복의 각 단계에 대한 값을 반환하고, 반복이 끝나면 StopAsyncIteration을 발생시켜야함.</li>
+</ul>
+<p>```py
+  import asyncio
+  from aioredis import create_redis</p>
+<p>async def main():
+    redis = await create_redis(('localhost', 6379))
+    keys = ['Americas', 'Africas', 'Europe', 'Asia']</p>
+<div class="codehilite"><pre><span></span><code>async for value in OneAtATime(redis, keys):
+  await do_something_with(value)
+</code></pre></div>
+
+<p>class OneAtTime:
+    def <strong>init</strong>(self, redis, keys):
+      self.redis = redis
+      self.keys = keys
+    def <strong>aiter</strong>(self):
+      self.ikeys = iter(self.keys)
+      return self
+    async def <strong>anext</strong>(self):
+      try:
+        k = next(slef.ikeys)
+      except StopIteration:
+        raise StopAsyncIteration</p>
+<div class="codehilite"><pre><span></span><code>  value = await self.redis.get(k)
+  return value
+
+asyncio.run(main())
+```
+- async for를 사용한다. 중요한 점은 반복 중에 다음 데이터를 얻기 전까지 반복 자체를 일시 정지 할 수 있음
+- 키에 연관된 데이터를 레디스에서 가져오는 동안 await 하여, 네트워크 I/O 동작이 완료되길 기다리는 동안 이벤트 루프에서 다른 동작이 수행되게 할 수 있다.
+- async for를 통해 for 루프의 편의성은 유지하면서, 데이터를 가져오는 I/O를 반복 수행하는 동작은 비동기로 처리할 수 있다. 하나의 이벤트 루프만으로 엄청난 양의 데이터를 처리할 수 있다.
+</code></pre></div>
+
+<ul>
+<li>
+<p>비동기 제너레이터를 사용한 더 간단한 코드
+    ```py
+    import asyncio
+    from aioredis import create_redis</p>
+<p>async def main():
+  redis = await create_redis(('localhost', 6379))
+  keys = ['Americas', 'Africas', 'Europe', 'Asia']redis = await create_redis(())</p>
+<p>async for value in one_at_a_time(redis, keys):
+    await do_something_with(value)</p>
+<p>async def one_at_a_time(redis, keys):
+  for k in keys:
+    value = await redis.get(k)
+    yield value</p>
+<p>asyncio.run(main())
+```
+- 비동기 이터레이터를 이용한 코드에서 필요했던 self.ikeys 부분이 필요가 없다. 키를 직접 전달하고 값을 받는다.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+    
+  </body>
+</html>
