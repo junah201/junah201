@@ -1,0 +1,68 @@
+# Project information
+site_name: Junah
+site_url: http://junah.dev
+site_author: Junah Kim
+site_description: Junah's personal notes
+docs_dir: ./
+
+# Repository
+repo_name: junah201/junah201
+repo_url: https://github.com/junah201/junah201
+
+# Configuration
+theme:
+  name: material
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tooltips
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+
+# Page tree
+nav:
+  - Introduction: "index.md"
+  - Blog: "blog/index.md"
+  - Study: "study/index.md"
+  - Book: "book/index.md"
+
+# Extensions
+markdown_extensions:
+  - mkautodoc
+  - markdown.extensions.codehilite:
+      guess_lang: false
+
+# Plugins
+plugins:
+  - blog
+    blog_dir: blog
+    blog_toc: true
+    post_date_format: long
