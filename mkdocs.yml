@@ -4,6 +4,7 @@ site_url: http://junah.dev
 site_author: Junah Kim
 site_description: Junah's personal notes
 docs_dir: docs
+edit_uri: ./edit/main/docs
 
 # Repository
 repo_name: junah201/junah201
@@ -49,16 +50,33 @@ theme:
 
 # Page tree
 nav:
-  - Introduction: "index.md"
-  - Blog: "blog/index.md"
-  - Study: "study/index.md"
-  - Book: "book/index.md"
+  - Introduction: README.md
+  - Study:
+      - study/README.md
+      - Udemy Best React: study/udemy_best_react/README.md
+      - 노마드코더 JS: study/javascript_for_beginners/readme.md
+      - Eveningdev Django: study/eveningdev_django_blog/README.md
+      - 생활코딩 Django: study/생활코딩_Django/README.md
+      - 코드캠프 강력한 CSS: study/코드캠프_강력한_CSS/README.md
+      - 노마드코드 Golang: study/go_for_beginners/README.md
+  - Book:
+      - book/README.md
+      - Using Asyncio in Python: book/Using Asyncio in Python/README.md
 
 # Extensions
 markdown_extensions:
   - mkautodoc
   - markdown.extensions.codehilite:
       guess_lang: false
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 # Plugins
 plugins:
