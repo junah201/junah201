@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "junah201"
+description = "Personal website of junah201"
+version = "1.0.0"
+authors = ["junah201 <junah.dev@gmail.com>"]
+readme = "README.md"
+homepage = "https://junah.dev"
+repository = "https://github.com/junah201/junah201"
+documentation = "https://junah.dev"
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.5.3"
+mkdocs-material = "^9.5.17"
+mkdocstrings = "^0.24.3"
+mkautodoc = "^0.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
