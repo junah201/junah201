@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+         <loc>http://junah.dev/</loc>
+         <lastmod>2024-04-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://junah.dev/blog/</loc>
          <lastmod>2024-04-17</lastmod>
          <changefreq>daily</changefreq>
@@ -21,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://junah.dev/study/eveningdev_django_blog/</loc>
+         <lastmod>2024-04-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://junah.dev/study/go_for_beginners/readme/</loc>
          <lastmod>2024-04-17</lastmod>
          <changefreq>daily</changefreq>
@@ -32,6 +42,11 @@
     </url>
     <url>
          <loc>http://junah.dev/study/udemy_best_react/readme/</loc>
+         <lastmod>2024-04-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://junah.dev/study/%EC%83%9D%ED%99%9C%EC%BD%94%EB%94%A9_Django/</loc>
          <lastmod>2024-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
