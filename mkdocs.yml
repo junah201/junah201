@@ -62,6 +62,7 @@ nav:
   - Book:
       - book/README.md
       - Using Asyncio in Python: book/Using Asyncio in Python/README.md
+      - 객체지향의 사실과 오해: book/객체지향의_사실과_오해/README.md
 
 # Extensions
 markdown_extensions:
