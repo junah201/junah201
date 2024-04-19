@@ -12,28 +12,26 @@
         <meta name="author" content="Junah Kim">
       
       
-        <link rel="canonical" href="http://junah.dev/study/javascript_for_beginners/readme/">
+        <link rel="canonical" href="http://junah.dev/book/Amazon_VPC_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9_%EC%9B%90%EB%A6%AC%EC%99%80_%EB%B3%B4%EC%95%88/">
       
       
-        <link rel="prev" href="../../">
+        <link rel="prev" href="../%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98_%EA%B8%80%EC%93%B0%EA%B8%B0/">
       
       
-        <link rel="next" href="../../eveningdev_django_blog/">
       
-      
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
     
     
       
-        <title>노마드코더 JS - Junah</title>
+        <title>Amazon VPC 네트워킹 원리와 보안 - Junah</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#-js" class="md-skip">
+        <a href="#amazon-vpc" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Junah" class="md-header__button md-logo" aria-label="Junah" data-md-component="logo">
+    <a href="../.." title="Junah" class="md-header__button md-logo" aria-label="Junah" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -114,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              노마드코더 JS
+              Amazon VPC 네트워킹 원리와 보안
             
           </span>
         </div>
@@ -200,7 +198,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Junah" class="md-nav__button md-logo" aria-label="Junah" data-md-component="logo">
+    <a href="../.." title="Junah" class="md-nav__button md-logo" aria-label="Junah" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -230,7 +228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -239,6 +237,211 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../study/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Study
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Study
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../study/udemy_best_react/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Udemy Best React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../study/javascript_for_beginners/readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    노마드코더 JS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../study/eveningdev_django_blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eveningdev Django
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../study/%EC%83%9D%ED%99%9C%EC%BD%94%EB%94%A9_Django/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    생활코딩 Django
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../study/코드캠프_강력한_CSS/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    코드캠프 강력한 CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../study/go_for_beginners/README.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    노마드코드 Golang
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -261,8 +464,6 @@
         
       
         
-      
-        
           
         
       
@@ -271,7 +472,7 @@
         
       
         
-      
+          
         
       
     
@@ -286,32 +487,32 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
-    Study
+    Book
   </span>
   
 
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Study
+            Book
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -324,11 +525,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../../udemy_best_react/README.md" class="md-nav__link">
+      <a href="../Using Asyncio in Python/README.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Udemy Best React
+    Using Asyncio in Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%9D%98_%EC%82%AC%EC%8B%A4%EA%B3%BC_%EC%98%A4%ED%95%B4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    객체지향의 사실과 오해
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98_%EA%B8%80%EC%93%B0%EA%B8%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    개발자의 글쓰기
   </span>
   
 
@@ -358,7 +601,7 @@
           
   
   <span class="md-ellipsis">
-    노마드코더 JS
+    Amazon VPC 네트워킹 원리와 보안
   </span>
   
 
@@ -369,7 +612,7 @@
         
   
   <span class="md-ellipsis">
-    노마드코더 JS
+    Amazon VPC 네트워킹 원리와 보안
   </span>
   
 
@@ -415,257 +658,36 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="학습 메모">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      1장 AWS 네트워킹 콘셉트
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      3장. VPC 네트워킹 구성 요소의 포함 관계
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../eveningdev_django_blog/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Eveningdev Django
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../%EC%83%9D%ED%99%9C%EC%BD%94%EB%94%A9_Django/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    생활코딩 Django
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../코드캠프_강력한_CSS/README.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    코드캠프 강력한 CSS
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../go_for_beginners/README.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    노마드코드 Golang
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../book/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Book
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Book
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../book/Using Asyncio in Python/README.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Using Asyncio in Python
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../book/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%9D%98_%EC%82%AC%EC%8B%A4%EA%B3%BC_%EC%98%A4%ED%95%B4/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    객체지향의 사실과 오해
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../book/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98_%EA%B8%80%EC%93%B0%EA%B8%B0/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    개발자의 글쓰기
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../book/Amazon_VPC_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9_%EC%9B%90%EB%A6%AC%EC%99%80_%EB%B3%B4%EC%95%88/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Amazon VPC 네트워킹 원리와 보안
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -729,6 +751,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="학습 메모">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      1장 AWS 네트워킹 콘셉트
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      3장. VPC 네트워킹 구성 요소의 포함 관계
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -746,7 +792,7 @@
                   
 
   
-    <a href="https://github.com/junah201/junah201/edit/main/docs/study/javascript_for_beginners/readme.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/junah201/junah201/edit/main/docs/book/Amazon_VPC_네트워킹_원리와_보안/README.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -755,71 +801,55 @@
     
       
     
-    <a href="https://github.com/junah201/junah201/raw/main/docs/study/javascript_for_beginners/readme.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/junah201/junah201/raw/main/docs/book/Amazon_VPC_네트워킹_원리와_보안/README.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="-js">노마드코더 - 바닐라 JS로 크롬 앱 만들기</h1>
-<p><a href="https://nomadcoders.co/javascript-for-beginners">강의 링크</a></p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/75025529/208254925-920c7a32-395c-4603-9d35-ca6094e24c80.png" /></p>
-<h3 id="_1">목적</h3>
-<p>html css 부분에서 단순히 구글링(야매)로 해결하고 넘어갔던 부분를 제대로 익히기 (기초다지기)</p>
-<h3 id="_2">학습 상태</h3>
+<h1 id="amazon-vpc">Amazon VPC 네트워킹 원리와 보안</h1>
+<p>AWS 토폴로지로 이해하는</p>
+<p><a href="https://product.kyobobook.co.kr/detail/S000001805099">책 링크</a></p>
+<p><img alt="image" src="https://github.com/junah201/junah201/assets/75025529/4492c653-2b5f-4d75-93e6-bc792f6cab60" /></p>
+<h2 id="_1">목적</h2>
+<p>VPC에 대해 정확히 모른 상태로 그저 예제를 보고 사용하기만 했었는데, 정확한 이해를 얻는 것</p>
+<h2 id="_2">학습 상태</h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> #1 [2021 Update] Introduction</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> #2 [2021 Update] Welcome to Javascript</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> #3 [2021 Update] Javascript on the Browser</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> #4 [2021 Update] Login</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> #5 [2021 Update] Clock</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> #6 [2021 Update] Quotes and Background</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> #7 [2021 Update] To Do List</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> #8 [2021 Update] Weather</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 1장 AWS 네트워킹 콘셉트</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 2장. VPC 네트워킹 구성 요소의 역할 분류</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 3장. VPC 네트워킹 구성 요소의 포함 관계</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 4장. 나의 AWS 전용 공간 : 계정</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 5장. AWS가 만들어 놓은 네트워크 공간</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 6장. 우리가 만들어 나갈 네트워크 공간</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 7장. 컴퓨팅 서비스의 네트워킹 요건</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 8장. 컴퓨팅 서비스 활용</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 9장. 연결 제어 I : VPC 통제 3요소</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 10장. 연결 제어 II : 분산 제어</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 11장. 연결 서비스 I : 공간과 공간 연결(양방향)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 12장. 연결 서비스 II : 공간과 서비스 연결(단방향)</li>
 </ul>
-<h3 id="_3">학습 메모</h3>
-<p>학습 도중 새롭게 알게된 사실에 대해서 메모합니다.</p>
-<p><strong>3. Javascript on the Browser</strong></p>
+<h2 id="_3">학습 메모</h2>
+<h3 id="1-aws">1장 AWS 네트워킹 콘셉트</h3>
+<p>AWS에서 사용할 수 있는 서비스 중에 VPC 네트워킹 서비스는 아래 2개로 분류된다.</p>
 <ul>
-<li>element.classList.toggle("className") : 해당 클래스가 있으면 빼고, 없으면 추가</li>
+<li>VPC 네트워킹 필수 서비스 : EC2나 RDS 등</li>
+<li>VPC 네트워킹 선택 가능 서비스 : Amazon Redshift는 VPC 안에 있을 수도 우리의 VPC의 연결되지 않을 수도 있다.</li>
 </ul>
-<p><strong>4. Login</strong></p>
+<h3 id="3-vpc">3장. VPC 네트워킹 구성 요소의 포함 관계</h3>
+<p>3.2.1 계정과 리전의 관계</p>
+<p>AWS의 모든 서비스는 암묵적으로 12자리 숫자로 구성된 계정 ID 식별자가 있다.
+AWS Cloud는 계정 전용 공간이며, 그 공간 안에서 리전을 선택할 수 있다.</p>
+<p>3.2 리전, VPC, 가용영역, 서브넷</p>
 <ul>
-<li>event.preventDefault() : 브라우저의 기본 동작 막기</li>
-<li>localStorage.setItem("key", "value")</li>
-<li>localStorage.getItem("key")</li>
-<li>localStorage.removeItem("key")</li>
+<li>각 리전은 VPC를 포함한다. 1개의 VPC가 여러 리전에 걸쳐있을 수는 없다.</li>
+<li>가용 영역 (AZ)는 리전을 세분화해 격리시킨 공간이다.</li>
+<li>1개의 VPC는 여러개의 가용영역에 걸쳐 있을 수 있다.</li>
+<li>가용영역에 포함되지 않는 VPC의 구성요소도 있는데, 보안그룹 네트워크 ACL 등이 이에 포함된다.</li>
+<li>VPC에 의존하지 않지만, 가용영역에 의존하는 구성요소도 있는데, S3처럼 리전에는 포함되지만 VPC와 무관한 서비스이거나 VPC와 연결 해제 상태의 서비스가 이곳으로 반환된다.</li>
+<li>서브넷은 VPC와 가용영역에 모두 포함되어야한다. 서비넷은 여러개의 VPC 혹은 가용영역에 걸쳐 있을 수는 없다.</li>
 </ul>
-<p><strong>5. Clock</strong></p>
-<ul>
-<li>setInterval(함수, ms) : 해당 함수를 지정한 ms마다 실행합니다.</li>
-<li>setTimeout(함수, ms) : 해당 함수를 지정한 ms 이후에 한번만 실행합니다.</li>
-<li>string.padStart(N, "K") : 해당 string의 길이가 N보다 작으면 string에 앞에 "K"를 붙여 길이를 N개로 만듭니다.</li>
-<li>string.padEnd(N, "K") : 해당 string의 길이가 N보다 작으면 string에 뒤에 "K"를 붙여 길이를 N개로 만듭니다.</li>
-</ul>
-<p><strong>6. Quotes and Background</strong></p>
-<ul>
-<li>Math.random() : 0 에서 1 사이의 랜덤 값</li>
-<li>Math.round(숫자) : 해당 숫자를 반올림합니다.</li>
-<li>Math.ceil(숫자) : 해당 숫자를 올림합니다.</li>
-<li>Math.floor(숫자) : 해당 숫자를 내림합니다.</li>
-<li>document.createElement("tag") : 해당 tag의 Element를 생성합니다.</li>
-</ul>
-<p><strong>7. To Do List</strong></p>
-<ul>
-<li>event.event.target.parentElement : target의 부모 요소</li>
-<li>element.remove() : 해당 Element를 삭제합니다.</li>
-<li>JSON.stringify(anyObject) : 해당 오브젝트를 문자열화 합니다.</li>
-<li>JSON.parse("string") : 해당 문자열을 오브젝트화 합니다.</li>
-<li>parseInt("string") : 해당 문자열을 int로 변환합니다.</li>
-<li>List.filter(anyFunction) : 해당 List에서 anyFunction에 값을 하나 씩 넣고 이후 리턴 값이 true 인 값만으로 모은 List를 반환합니다.</li>
-</ul>
-<p><strong>8. Weather</strong></p>
-<ul>
-<li>navigator.geolocation.getCurrentPosition(successCallback, errorCallback) :</li>
-<li>fetch(url) : url에 get 요청</li>
-</ul>
+<p><img alt="Iamge" src="https://velog.velcdn.com/images/kma95278/post/1ee99d73-d39b-469c-a956-9632da7e0522/image.png" /></p>
 
 
 
@@ -849,7 +879,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Study">
+          <a href="../%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98_%EA%B8%80%EC%93%B0%EA%B8%B0/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 개발자의 글쓰기">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -859,27 +889,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Study
+                개발자의 글쓰기
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../eveningdev_django_blog/" class="md-footer__link md-footer__link--next" aria-label="Next: Eveningdev Django">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Eveningdev Django
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
@@ -910,10 +924,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
       
     
   </body>
