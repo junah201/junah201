@@ -64,6 +64,7 @@ nav:
       - Using Asyncio in Python: book/Using Asyncio in Python/README.md
       - 객체지향의 사실과 오해: book/객체지향의_사실과_오해/README.md
       - 개발자의 글쓰기: book/개발자의_글쓰기/README.md
+      - Amazon VPC 네트워킹 원리와 보안: book/Amazon_VPC_네트워킹_원리와_보안/README.md
 
 # Extensions
 markdown_extensions:
