@@ -29,39 +29,8 @@
 - `Side project` [Twip API](https://github.com/junah201/Twip) (2022.01.25 ~ 2022.01.30) : `Python` `PyPI` `WebSocket`
 - `Side project` [자동자가진단 디스코드 봇](https://github.com/junah201/discord-bot-autoselfcheck) (2021.05.26 ~ 2021.11.05) : `Python` `discord.py`
 
-## 🛠 Tech Stack
+## Github
 
-<h4 align="center"> Language </h4>
-
-<p align="center">
-    <img src="https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white"/>
-    <img src="https://img.shields.io/badge/JavaScript-gray?style=flat-square&logo=JavaScript&logoColor=F7DF1E"/>
-    <img src="https://img.shields.io/badge/TypeScript-white?style=flat-square&logo=TypeScript&logoColor=3178C6"/>
-    <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white"/>
-</p>
-
-<h4 align="center"> FrontEnd </h4>
-
-<p align="center">
-    <img src="https://img.shields.io/badge/React-white?style=flat-square&logo=React&logoColor=61DAFB"/>
-</p>
-
-<h4 align="center"> BackEnd </h4>
-
-<p align="center">
-    <img src="https://img.shields.io/badge/fastapi-109989?style=flat-square&logo=FASTAPI&logoColor=white">
-    <img src="https://img.shields.io/badge/Flask-092E20?style=flat-square&logo=Flask&logoColor=white"/>
-</p>
-
-<h4 align="center"> Other </h4>
-
-<p align="center">
-    <img src="https://img.shields.io/badge/GitHub-gray?style=flat-square&logo=GitHub&logoColor=black"/>
-    <img src="https://img.shields.io/badge/Git-blue?style=flat-square&logo=Git&logoColor=F05032"/>
-    <img src="https://img.shields.io/badge/Notion-b4f5bd?style=flat-square&logo=Notion&logoColor=black"/>
-    <img src="https://img.shields.io/badge/aws-333664?style=flat-square&logo=amazon-aws&logoColor=white"/>
-    <img src="https://img.shields.io/badge/Mysql-E6B91E?style=flat-square&logo=MySql&logoColor=white"/>
-</p>
 <p align="center">
 	<img src="https://github-readme-stats.vercel.app/api?username=junah201"/>
 </p>
