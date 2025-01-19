@@ -17,8 +17,9 @@
 
 ## 💻 Projects
 
+- `Side project` [MoDuRank](https://modurank.junah.dev) (2025.01.14 ~) : `Python` `Lambda` `DynamoDB` `Servereless framework` `CloudFront` `S3` `React` `shadcn.ui` `tailwindcss`
 - `Outsourcing` Confidential Project (2024.09.21 ~ 2024.12.10) : `Python` `FastAPI` `React` `shadcn.ui` `tailwindcss` `PostgreSQL` `Lambda`
-- `Side project` [vellox - GCP Cloud Function을 위한 adapter](https://vellox.junah.dev/) (2024.04.11 ~ 2024.04.13) : `Python` `ASGI` `GCP Cloud Functions` `PyPI` `mkdocs`
+- `Side project` [vellox - GCP Cloud Function을 위한 adapter](https://vellox.junah.dev) (2024.04.11 ~ 2024.04.13) : `Python` `ASGI` `GCP Cloud Functions` `PyPI` `mkdocs`
 - `Side project` [치지직 방송 알림 디스코드 봇](https://github.com/junah201/chzzk-discord-bot) (2024.01.02 ~ 2024.01.12) : `Python` `Lambda` `React` `MUI` `DynamoDB`
 - `Outsourcing` [SNUH 연구단 관리 사이트](https://github.com/junah201/SNUH) (2023.08.14 ~ 2023.12.06) : `Python` `FastAPI` `React` `MUI` `MySQL` `EC2` `S3`
 - `Side project` [Solvedac readme stats](https://github.com/junah201/solvedac-readme-stats) (2023.08.08 ~ 2023.08.09) : `Python` `Lambda` `Figma`
