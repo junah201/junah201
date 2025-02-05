@@ -60,3 +60,7 @@
   <img src="https://medium-readme-stats.vercel.app/api/post?name=junah201">
 </a>
 </p>
+
+## 🎤 Presentations
+
+- `백베콘 2024 Winter`: AWS Lambda + DynamoDB로 월 1달러로 10000개 서버에 봇 배포하기 ([link](https://bbconf.kr/archive), [ppt](https://bbconfwebdav.vulcan.site/bbconf/2024-winter/Junah201_AWS%20Lambda%20+%20DynamoDB%eb%a1%9c%20%ec%9b%94%201%eb%8b%ac%eb%9f%ac%eb%a1%9c%2010000%ea%b0%9c%20%ec%84%9c%eb%b2%84%ec%97%90%20%eb%b4%87%20%eb%b0%b0%ed%8f%ac%ed%95%98%ea%b8%b0.pptx), `2024.01.11`)
