@@ -17,6 +17,7 @@
 
 ## 💻 Projects
 
+- `Outsourcing` Confidential Project (2025.04.12 ~ ) : `TypeScript` `NestJS` `Prisma` `GraphQL` `PostgreSQL` `React` `shadcn.ui`
 - `Side project` [MoDuRank](https://github.com/junah201/MoDuRank) (2025.01.14 ~ 2025.01.23) : `Python` `Lambda` `DynamoDB` `Servereless framework` `CloudFront` `S3` `React` `shadcn.ui` `tailwindcss`
 - `Outsourcing` Confidential Project (2024.09.21 ~ 2024.12.10) : `Python` `FastAPI` `React` `shadcn.ui` `tailwindcss` `PostgreSQL` `Lambda`
 - `Side project` [vellox - GCP Cloud Function을 위한 adapter](https://vellox.junah.dev) (2024.04.11 ~ 2024.04.13) : `Python` `ASGI` `GCP Cloud Functions` `PyPI` `mkdocs`
