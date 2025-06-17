@@ -58,7 +58,7 @@
 
 <p align="center">
 <a href="https://medium.com/@junah201">
-  <img src="https://medium-readme-stats.vercel.app/api/post?name=junah201">
+  <img src="https://medium.junah.dev/v1/post?username=junah201">
 </a>
 </p>
 
