@@ -46,7 +46,7 @@
     </a>
 	<br/>
 	<a href="https://atcoder.jp/users/junah" target="_blank" title="junah">
-		<img src="https://atcoder.junah.dev/v2/generate_badge?name=junah" />
+		<img src="https://atcoder.junah.dev/v4/generate_badge?name=junah" />
 	</a>
 	<br/>
 	<a href="https://codeforces.com/profile/junah" target="_blank" title="junah">
